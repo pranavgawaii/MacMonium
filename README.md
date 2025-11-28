@@ -1,4 +1,4 @@
-## We went Viral?\!  [Check out the post!](https://www.google.com/search?q=https://github.com/rocktopus101/MacbookHarmonium/releases/latest)
+## We went Viral?\!  [Check out the post!](https://www.instagram.com/reel/DP9AHwSjcvt/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==)
 
 # Your MacBook is Now a Harmonium
 
