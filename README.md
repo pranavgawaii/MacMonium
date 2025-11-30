@@ -1,6 +1,4 @@
-## We went Viral?\!  [Check out the post!](https://www.instagram.com/reel/DP9AHwSjcvt/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==)
-
-# Your MacBook is Now a Harmonium
+# Your MacBook is Now a MacMonium
 
 Hi, I'm Vedaant (or **rocktopus101** on GitHub). As a Computer Science grad student at USC, my MacBook is usually for compiling code, writing papers, and fueling a mild caffeine addiction. But I figured, why not make it musical?
 
