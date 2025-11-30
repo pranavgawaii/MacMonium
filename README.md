@@ -1,6 +1,6 @@
 # Your MacBook is Now a MacMonium
 
-Hi, I'm Vedaant (or **rocktopus101** on GitHub). As a Computer Science grad student at USC, my MacBook is usually for compiling code, writing papers, and fueling a mild caffeine addiction. But I figured, why not make it musical?
+Hi, I'm Pranav Gawai (or **pranavgawaii** on GitHub). As a Computer Science student at MIT-ADT University, Pune, my MacBook is usually for compiling code, building projects, and managing placements. But I figured, why not make it musical?
 
 This app transforms your MacBook into a surprisingly fun and expressive harmonium. You play the notes on the keyboard, and in a stroke of what is either genius or madness, you **use the laptop's lid as the bellows to pump air**.
 
@@ -21,40 +21,35 @@ The concept is simple, just like a real harmonium: you need air and you need to 
 ## The Obligatory FAQ
 
 **So, what is this, exactly?**
-It's an app that proves that with enough programming, you can turn any piece of hardware into a musical instrument. It's also a fantastic way for me to learn about macOS audio programming instead of studying for my finals.
+It's an app that proves that with enough programming, you can turn any piece of hardware into a musical instrument. It's also a creative exploration of macOS audio programming and hardware sensor integration.
 
 **Wait, the LID is the bellows? How?**
 Yep. MacBooks have a hidden lid angle sensor that reports its exact position. I'm using the *velocity* of the lid movement to simulate pumping air into a virtual reservoir. It's the most fun you can have with a hinge.
 
-**Will it work on my M1 Mac?**
-I made and tested this on my M1 pro, so hopefully it does on yours too\!
-However, users seem to have troubles with getting it to run on the base M1 Air and touchbar Pro from 2020. :/
+**Will it work on my M1/M2/M3 Mac?**
+Tested on M1 Pro. Compatibility may vary on base M1 Air and 2020 touchbar Pro models.
 
 **What about my iMac?**
-Does it have a lid you can flap? No? Then you might be out of luck. I suppose you could try picking it up and shaking it gently, but my lawyer (and yours) would strongly advise against it.
+Does it have a lid you can flap? No? Then you might be out of luck.
 
 **Can I help?**
-Please do\! Fork the repo, add a tabla machine, make it sound like a sitar, fix my questionable audio mixing—go wild.
-Right now, the code doesn't really work for piano style sharper notes so if you could make that work it would be great\!
+Please do! Fork the repo, add features, improve the audio mixing—go wild.
+Right now, the code doesn't fully support piano-style sharper notes, so contributions in that area would be great!
 
 **Why is the size so big?**
-It's the 40 high quality Harmonium sounds.
+It's the 40 high-quality harmonium sound samples that make it authentic.
 
 -----
 
 ## Origins & Big Thanks
 
-This project stands on the shoulders of a giant. It would not exist without the original **LidAngleSensor** utility created by **Sam Gold**. He did the hard work of discovering the sensor and building the original app. I just put a musical spin on it. All credit for the foundational concept goes to him. You should check out his work\!
+This project stands on the shoulders of a giant. It would not exist without the original **LidAngleSensor** utility created by **Sam Gold**. He did the hard work of discovering the sensor and building the original app. I just put a musical spin on it. All credit for the foundational concept goes to him.
 
-## Brew Installation
+## Installation
 
-Simply run the following command in the terminal!
-``` 
-brew install hingemonium
-```
+Download the latest release from the [Releases](https://github.com/pranavgawaii/macmonium/releases) page.
 
-Or just download the latest release\!
+## Building It Yourself
 
-## Building It
+You'll need Xcode. Clone the repo, open the project, hit the big triangle play button, and you should be good to go.
 
-You'll need Xcode. Clone the repo, hit the big triangle play button, and you should be good to go.
