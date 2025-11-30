@@ -2,7 +2,7 @@
 //  HarmoniumAudioEngine.h
 //  LidAngleSensor
 //
-//  Created by Vedaant Rajeshirke on 9/27/25.
+//  Created by Pranav Gawai on 10/20/25.
 //
 
 #import <Foundation/Foundation.h>

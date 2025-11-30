@@ -1,52 +1,62 @@
-// AppDelegate.h
+//
+//  AppDelegate.h
+//  MacMonium
+//
+//  Created by Pranav Gawai on 2025-10-20.
+//
+//
 
 #import <Cocoa/Cocoa.h>
-#import "HarmoniumAudioEngine.h"
-#import "NSLabel.h"
+#import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
+
 #import "LidAngleSensor.h"
+#import "HarmoniumAudioEngine.h"
 #import "KeyCaptureView.h"
 
 typedef NS_ENUM(NSInteger, NoteNamingMode) {
-    NoteNamingModeWestern,
-    NoteNamingModeSargam
+    NoteNamingModeWestern = 0,
+    NoteNamingModeSargam = 1
 };
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, KeyCaptureViewDelegate>
 
-// Main Window
 @property (strong) NSWindow *window;
 
-// Lid Sensor & Timer
+// Core systems
 @property (strong) LidAngleSensor *lidSensor;
-@property (strong) NSTimer *updateTimer;
+@property (strong) HarmoniumAudioEngine *harmoniumEngine;
 
+// Timing & physics
 @property (nonatomic, assign) double lastLidAngle;
 @property (nonatomic, assign) double lastUpdateTime;
 @property (nonatomic, assign) double airPressure;
 
+// UI
+@property (strong) KeyCaptureView *keyView;
+@property (strong) NSView *backgroundView;
+@property (strong) NSTextField *titleField;
+@property (strong) NSTextField *angleField;
+@property (strong) NSPopUpButton *scalePopUp;
+@property (strong) NSPopUpButton *tonePopUp;
+@property (strong) NSPopUpButton *namingPopUp;
+@property (strong) NSButton *maxAirSwitch;
+@property (strong) NSProgressIndicator *airBar;
+@property (strong) NSTextField *legendField;
+@property (strong) NSMutableArray<NSButton *> *keyButtons; // visual keys
 
-// Harmonium Audio Engine
-@property (strong) HarmoniumAudioEngine *harmoniumEngine;
-
-// UI Elements
-@property (strong) NSLabel *titleLabel;
-@property (strong) NSLabel *angleLabel; // For showing the angle
-@property (strong) NSLabel *scaleLabel;
-@property (strong) NSPopUpButton *scalePopUpButton;
-@property (strong) NSLabel *notationLabel;
-@property (strong) NSPopUpButton *namingModePopUpButton;
-@property (strong) NSLabel *legendLabel; // For the key map legend
-@property (strong) NSLabel *instructionsLabel;
-
-// NEW: UI Elements for the air pressure toggle
-@property (strong) NSLabel *airPressureToggleLabel;
-@property (strong) NSSwitch *airPressureToggle;
-
-// State Management
+@property (strong) NSTimer *updateTimer;
+@property (nonatomic, assign) NoteNamingMode currentNamingMode;
 @property (strong) NSArray<NSString *> *availableScales;
 @property (strong) NSDictionary<NSString *, NSArray<NSNumber *> *> *scaleNoteMapping;
-@property (strong) NSString *currentScale;
-@property (nonatomic, assign) NoteNamingMode currentNamingMode;
-@property (strong) NSArray<NSNumber *> *mappedKeys; // To iterate keys in order
+@property (strong) NSArray<NSNumber *> *mappedKeys; // keys in order
+
+// Mapping table (C3 = MIDI 48)
+extern const int kKeyToMidiNote[];
+
+- (int)getMidiNoteForKey:(char)key;
+- (NSString *)noteNameForMidi:(int)midiNote;
+- (void)updateLegend;
+- (void)playVisualForMidi:(int)midiNote;
 
 @end
